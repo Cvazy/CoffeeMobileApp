@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 24,
     width: "100%",
-    paddingTop: 160,
+    paddingTop: 110,
   },
 
   contentWrapper: {
