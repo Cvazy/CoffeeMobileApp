@@ -1,7 +1,7 @@
 import { Text } from "react-native";
 
 const CupPage = () => {
-  return <Text>CupPage</Text>;
+  return <Text></Text>;
 };
 
 export default CupPage;

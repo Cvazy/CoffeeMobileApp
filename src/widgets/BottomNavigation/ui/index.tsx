@@ -1,11 +1,7 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
-import {
-  useNavigation,
-  useNavigationState,
-  useRoute,
-} from "@react-navigation/native";
-import { COLORS, IRouteConfig } from "../../../shared";
+import { View, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { COLORS, IRouteConfig, SvgIcon } from "../../../shared";
 import { styles } from "./styles";
 import Svg, { Path } from "react-native-svg";
 
@@ -37,20 +33,10 @@ export const BottomNavigation = ({
               onPress={() => navigate(name)}
             >
               <View style={styles.linkWrapper}>
-                <Svg
-                  style={styles.linkIcon}
-                  viewBox={"0 0 32 32"}
-                  fill={"none"}
-                  xmlns={"http://www.w3.org/2000/svg"}
-                >
-                  <Path
-                    d={iconPathCode}
-                    stroke={currentRoute === name ? "white" : "#464646"}
-                    strokeWidth={2}
-                    strokeLinecap={"round"}
-                    strokeLinejoin={"round"}
-                  />
-                </Svg>
+                <SvgIcon
+                  iconPathCode={iconPathCode || ""}
+                  whiteCondition={currentRoute === name}
+                />
               </View>
             </Pressable>
           );

@@ -1,7 +1,7 @@
 import { Text } from "react-native";
 
 const NotificationsPage = () => {
-  return <Text>NotificationsPage</Text>;
+  return <Text></Text>;
 };
 
 export default NotificationsPage;

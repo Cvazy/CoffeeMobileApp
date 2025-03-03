@@ -27,9 +27,4 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
-  linkIcon: {
-    width: 32,
-    height: 32,
-  },
 });

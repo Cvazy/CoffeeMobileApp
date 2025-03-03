@@ -2,60 +2,41 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../../shared";
 
 export const styles = StyleSheet.create({
-  wrapper: {
+  container: {
     flex: 1,
-    backgroundColor: "#060807",
   },
 
-  top: {
-    height: "55%",
-    overflow: "visible",
+  topContainer: {
+    backgroundColor: COLORS.primary,
+    width: "100%",
+  },
+
+  topContainerWrapper: {
+    paddingTop: 10,
+    paddingHorizontal: 24,
+    paddingBottom: 104,
+    position: "relative",
+  },
+
+  bannerContainer: {
     position: "absolute",
-    top: 0,
+    zIndex: 10,
+    top: 85,
     left: 0,
     right: 0,
+    width: "100%",
+    paddingHorizontal: 24,
+  },
+
+  banner: {
+    flexGrow: 1,
+    borderRadius: 20,
+    height: "auto",
+  },
+
+  contentContainer: {
     justifyContent: "center",
-    backgroundColor: COLORS.dark,
-  },
-
-  topBgImage: {
-    flex: 1,
-    position: "absolute",
-    left: -100,
-    width: 650,
-    height: 970,
-    transform: [{ rotate: "30deg" }],
-  },
-
-  bottom: {
-    height: "45%",
-    backgroundColor: "rgba(27, 174, 118, 0.5)",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-
-  bottomWrapper: {
-    flex: 1,
-    paddingHorizontal: 36,
-    paddingVertical: 52,
-  },
-
-  bottomTitle: {
-    gap: 14,
-  },
-
-  title: {
-    fontSize: 30,
-    color: COLORS.white,
-    textAlign: "center",
-    fontWeight: "600",
-  },
-
-  description: {
-    fontSize: 14,
-    color: COLORS.white,
-    textAlign: "center",
+    paddingHorizontal: 24,
+    width: "100%",
   },
 });

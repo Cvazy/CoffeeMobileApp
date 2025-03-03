@@ -16,7 +16,7 @@ export enum AppRoutes {
 }
 
 export const RouteNames: Record<AppRoutes, string> = {
-  [AppRoutes.CUP]: "Cup",
+  [AppRoutes.CUP]: "My Cup",
   [AppRoutes.FAVOURITES]: "Favourites",
   [AppRoutes.NOTIFICATIONS]: "Notifications",
   [AppRoutes.MAIN]: "Home",

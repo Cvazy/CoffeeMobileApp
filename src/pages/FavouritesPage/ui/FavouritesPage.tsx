@@ -1,7 +1,7 @@
 import { Text } from "react-native";
 
 const FavouritesPage = () => {
-  return <Text>FavouritesPage</Text>;
+  return <Text></Text>;
 };
 
 export default FavouritesPage;
