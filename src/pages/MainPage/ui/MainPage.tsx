@@ -1,7 +1,8 @@
-import { Dimensions, Text, Image, View } from "react-native";
+import { Dimensions, Image, View } from "react-native";
 import { styles } from "./styles";
 import { SearchingCoffee } from "../../../features";
 import HomeBanner from "../../../../assets/images/banners/Home.png";
+import { CategoriesList, ProductsList } from "../../../widgets";
 
 const MainPage = () => {
   const windowDimensions = Dimensions.get("window");
@@ -31,7 +32,13 @@ const MainPage = () => {
         </View>
       </View>
 
-      <View style={styles.contentContainer}></View>
+      <View style={styles.contentContainer}>
+        <View style={styles.contentWrapper}>
+          <CategoriesList />
+
+          <ProductsList />
+        </View>
+      </View>
     </View>
   );
 };

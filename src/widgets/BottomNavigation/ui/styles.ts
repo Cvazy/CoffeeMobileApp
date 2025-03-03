@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     position: "absolute",
     zIndex: 10,
-    bottom: 48,
+    bottom: 32,
     left: 21,
     right: 21,
     flexDirection: "row",

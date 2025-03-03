@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   },
 
   top: {
-    height: "55%",
+    height: "60%",
     overflow: "visible",
     position: "absolute",
     top: 0,
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
   },
 
   bottom: {
-    height: "45%",
+    height: "40%",
     backgroundColor: "rgba(27, 174, 118, 0.5)",
     position: "absolute",
     bottom: 0,

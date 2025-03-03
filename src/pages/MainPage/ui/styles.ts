@@ -35,8 +35,15 @@ export const styles = StyleSheet.create({
   },
 
   contentContainer: {
+    flex: 1,
     justifyContent: "center",
     paddingHorizontal: 24,
     width: "100%",
+    paddingTop: 160,
+  },
+
+  contentWrapper: {
+    flex: 1,
+    gap: 24,
   },
 });
