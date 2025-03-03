@@ -1,14 +1,18 @@
-import { Dimensions, Image, View } from "react-native";
+import { Dimensions, Image, ScrollView, View } from "react-native";
 import { styles } from "./styles";
 import { SearchingCoffee } from "../../../features";
 import HomeBanner from "../../../../assets/images/banners/Home.png";
 import { CategoriesList, ProductsList } from "../../../widgets";
 
-const MainPage = () => {
-  const windowDimensions = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 
+const MainPage = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView
+      horizontal={false}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={styles.container}
+    >
       <View style={styles.topContainer}>
         <View style={styles.topContainerWrapper}>
           <SearchingCoffee />
@@ -17,14 +21,14 @@ const MainPage = () => {
         <View
           style={{
             ...styles.bannerContainer,
-            height: windowDimensions.width / 2.5,
+            height: width / 2.5,
           }}
         >
           <Image
             style={{
               ...styles.banner,
-              width: windowDimensions.width - 48,
-              height: windowDimensions.width / 2.5,
+              width: width - 48,
+              height: width / 2.5,
             }}
             source={HomeBanner}
             alt={"Home Banner"}
@@ -39,7 +43,7 @@ const MainPage = () => {
           <ProductsList />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

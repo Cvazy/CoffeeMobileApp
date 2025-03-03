@@ -1,9 +1,16 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { COLORS } from "../../../shared";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    ...Platform.select({
+      ios: {
+        paddingBottom: 96,
+      },
+      android: {
+        paddingBottom: 128,
+      },
+    }),
   },
 
   topContainer: {

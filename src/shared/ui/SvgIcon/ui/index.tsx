@@ -10,6 +10,7 @@ interface ISvgIconProps {
   children?: ReactNode;
   fill?: string;
   light?: boolean;
+  strokeWidth?: number;
 }
 
 export const SvgIcon = ({
@@ -20,6 +21,7 @@ export const SvgIcon = ({
   height,
   light = false,
   fill,
+  strokeWidth = 2,
   children,
 }: ISvgIconProps) => {
   return (
@@ -37,7 +39,7 @@ export const SvgIcon = ({
         stroke={
           !light ? (color ? color : whiteCondition ? "white" : "#464646") : ""
         }
-        strokeWidth={!light ? 2 : ""}
+        strokeWidth={!light ? strokeWidth : ""}
         strokeLinecap={"round"}
         strokeLinejoin={"round"}
       />
