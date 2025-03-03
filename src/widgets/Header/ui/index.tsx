@@ -7,17 +7,23 @@ import {
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 
-export const Header = ({
-  currentRoute,
-  isOpenBurgerMenu,
-  setIsOpenBurgerMenu,
-}: {
+interface IHeaderProps {
   currentRoute: string;
   isOpenBurgerMenu: boolean;
   setIsOpenBurgerMenu: (
     value: ((prevState: boolean) => boolean) | boolean,
   ) => void;
-}) => {
+  setIsOpenProfileMenu: (
+    value: ((prevState: boolean) => boolean) | boolean,
+  ) => void;
+}
+
+export const Header = ({
+  currentRoute,
+  isOpenBurgerMenu,
+  setIsOpenBurgerMenu,
+  setIsOpenProfileMenu,
+}: IHeaderProps) => {
   const animation = useRef(new Animated.Value(0)).current;
   const insets = useSafeAreaInsets();
 
@@ -109,7 +115,7 @@ export const Header = ({
             </View>
           </View>
 
-          <Pressable onPress={() => console.log("Header Profile")}>
+          <Pressable onPress={() => setIsOpenProfileMenu((prev) => !prev)}>
             <SvgIcon
               whiteCondition={true}
               iconPathCode={

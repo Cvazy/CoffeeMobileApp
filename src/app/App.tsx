@@ -4,11 +4,12 @@ import { RootStack } from "./model";
 import React, { useState } from "react";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { COLORS, RouteConfig } from "../shared";
-import { BottomNavigation, BurgerMenu, Header } from "../widgets";
+import { BottomNavigation, BurgerMenu, Header, ProfileMenu } from "../widgets";
 import { styles } from "./styles";
 
 export default function App() {
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState<boolean>(false);
+  const [isOpenProfileMenu, setIsOpenProfileMenu] = useState<boolean>(false);
 
   const [currentRoute, setCurrentRoute] = useState<string | undefined>("Start");
 
@@ -33,9 +34,15 @@ export default function App() {
                 currentRoute={currentRoute || ""}
                 isOpenBurgerMenu={isOpenBurgerMenu}
                 setIsOpenBurgerMenu={setIsOpenBurgerMenu}
+                setIsOpenProfileMenu={setIsOpenProfileMenu}
               />
 
               <BurgerMenu isOpen={isOpenBurgerMenu} />
+
+              <ProfileMenu
+                isOpenProfileMenu={isOpenProfileMenu}
+                setIsOpenProfileMenu={setIsOpenProfileMenu}
+              />
             </>
           )}
 
